@@ -1,0 +1,551 @@
+@import url('[https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Lemon&family=Patua+One&family=Poppins:wght@200;400;500;600;700;800;900&display=swap](https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&family=Lemon&family=Patua+One&family=Poppins:wght@200;400;500;600;700;800;900&display=swap)');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+/* ================= NAV ================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.4s ease;
+}
+
+nav.scrolled {
+    background: #0b0b0b;
+    backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+nav .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+}
+
+nav .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+nav .logo {
+    width: 58px;
+}
+
+nav .links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    transition: opacity .3s ease;
+}
+
+nav .links a {
+    text-decoration: none;
+    color: #0b0b0b;
+    font-weight: 600;
+    padding: 6px;
+    transition: all .18s;
+}
+
+nav .links a:hover {
+    color: #6c63ff;
+    text-shadow: 0 0 6px rgba(108, 99, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ícones e busca */
+nav .search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 6px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: all .3s ease;
+}
+
+nav .search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: #0b0b0b;
+}
+
+nav .search i {
+    color: #0b0b0b;
+}
+
+/* modo scrolled (fundo preto, texto branco) */
+nav.scrolled .links a,
+nav.scrolled .search i,
+nav.scrolled .search input {
+    color: #fff;
+}
+
+nav.scrolled .search {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ================= HERO ================= */
+.landingpage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/back.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    padding-top: 70px;
+}
+
+.landingpage .content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.heading {
+    max-width: 520px;
+}
+
+.heading h3 {
+    color: #e63946;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.heading h1 {
+    font-size: 3.2rem;
+    margin: 12px 0;
+    color: #0b0b0b;
+    line-height: 1.02;
+}
+
+.heading p {
+    color: #222;
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+}
+
+.hero-ctas {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.btn.primary {
+    background: #0b0b0b;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(11, 11, 11, 0.12);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #111;
+}
+
+.image img {
+    width: 420px;
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+/* ================= ABOUT ================= */
+.aboutus {
+    background: #0b0b0b;
+    color: white;
+    padding: 60px 20px;
+}
+
+.aboutus .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aboutus img {
+    width: 420px;
+    filter: drop-shadow(0 8px 30px rgba(255, 255, 255, 0.06));
+}
+
+.aboutus .aboutus-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.aboutus h1 {
+    color: #ff7a52;
+    font-family: 'Patua One', serif;
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+}
+
+.aboutus p {
+    color: #e6e6e6;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.aboutus .tagline {
+    margin-top: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ================= PLANOS ================= */
+.details-foods {
+    background: #0b0b0b;
+    padding: 60px 18px;
+}
+
+.details-foods .title {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.details-foods .title h1 {
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+.foods {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* CARD */
+.card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: all .25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+}
+
+.card img {
+    width: 120px;
+}
+
+.discription {
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    flex: 1;
+}
+
+.discription h2 {
+    font-family: 'Patua One', serif;
+    color: #fff;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+}
+
+.benefits {
+    list-style: none;
+    margin: 8px 0 12px 0;
+    padding-left: 0;
+    color: #dcdcdc;
+}
+
+.benefits li {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+.price {
+    font-family: 'Lemon', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+    text-align: right;
+    margin-top: 8px;
+}
+
+/* CTA dentro dos cards */
+.card-cta {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.card .btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.card.featured {
+    border: 2px solid rgba(255, 122, 82, 0.12);
+}
+
+.card.premium {
+    background: linear-gradient(180deg, rgba(255, 122, 82, 0.06), rgba(255, 122, 82, 0.02));
+    border: 1px solid rgba(255, 122, 82, 0.12);
+}
+
+/* ================= DOWNLOAD ================= */
+.download {
+    background: #0b0b0b;
+    padding: 60px 18px;
+    color: #fff;
+}
+
+.download .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.download .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download .image img {
+    width: 220px;
+    margin-right: 6px;
+    display: block;
+}
+
+.download h1 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.download p {
+    color: #ddd;
+    font-size: 1.05rem;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.icons img {
+    width: 140px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+    background: #fff;
+    padding: 24px 18px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #222;
+    font-size: 0.95rem;
+}
+
+/* ================= CONTACT MODAL ================= */
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.contact-modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.contact-card {
+    background: #fff;
+    width: 360px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
+    position: relative;
+}
+
+.contact-card .close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+}
+
+.contact-card label {
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #333;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: flex-end;
+}
+
+.form-feedback {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media(max-width:1100px) {
+    .foods {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .landingpage .content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .image img {
+        width: 320px;
+        transform: none;
+    }
+
+    .aboutus .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .aboutus img {
+        width: 320px;
+    }
+
+    .download .image img {
+        width: 180px;
+    }
+}
+
+@media(max-width:640px) {
+    nav .links {
+        display: none;
+    }
+
+    nav .search {
+        width: 48%;
+    }
+
+    .foods {
+        grid-template-columns: 1fr;
+        padding: 0 12px;
+    }
+
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .download .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .contact-card {
+        width: 92%;
+    }
+}
+
+/* divisões suaves entre seções */
+.aboutus::after,
+.details-foods::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    position: relative;
+    bottom: -60px;
+    z-index: 5;
+}

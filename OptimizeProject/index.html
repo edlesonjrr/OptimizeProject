@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OPTIMIZE | Home</title> <!-- fontes & icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" /> <!-- meta -->
+    <meta name="description"
+        content="OPTIMIZE — otimização de imagens, criação de sites e landing pages para performance e conversão." />
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="nav-container"> <img src="images/logo.png" alt="Logo OPTIMIZE" class="logo">
+                <div class="links"> <a href="#home">Home</a> <a href="#sobre">Sobre</a> <a href="#planos">Planos</a> <a
+                        href="#download">Aplicativo</a> </div>
+                <div class="search"> <input type="search" placeholder="Procurar serviços..." aria-label="Pesquisar"> <i
+                        class="fa-solid fa-magnifying-glass"></i> </div>
+            </div>
+        </div>
+    </nav> <!-- HERO / Landing -->
+    <header id="home" class="landingpage">
+        <div class="content">
+            <div class="heading" data-aos="fade-right" data-aos-duration="1200">
+                <h3>OPTIMIZE</h3>
+                <h1>Otimização eficiente<br>para seu negócio</h1>
+                <p>Imagens mais leves, sites mais rápidos e landing pages que convertem. Tudo pensado para entregar
+                    resultado.</p>
+                <div class="hero-ctas"> <button class="btn primary" id="contactBtn" data-plan="">Entrar em
+                        contato</button> <a href="#planos" class="btn ghost">Ver planos</a> </div>
+            </div>
+            <div class="image" data-aos="zoom-in" data-aos-duration="1200"> <img src="images/main.png"
+                    alt="Ilustração de performance" /> </div>
+        </div>
+    </header> <!-- SOBRE -->
+    <section id="sobre" class="aboutus">
+        <div class="container"> <img src="images/aboutus.png" alt="Sobre a Optimize" data-aos="zoom-in"
+                data-aos-duration="900">
+            <div class="aboutus-content" data-aos="fade-left" data-aos-duration="900">
+                <h1>Sobre Nós</h1>
+                <p>Na <strong>OPTIMIZE</strong>, transformamos ideias em resultados. Somos uma empresa digital
+                    especializada em <strong>otimização de imagens</strong>, criação de <strong>sites</strong> e
+                    <strong>landing pages</strong> de alta performance. Unimos design, velocidade e estratégia para
+                    colocar sua marca no máximo desempenho online.
+                </p>
+                <p class="tagline">OPTIMIZE — sua presença digital mais leve, rápida e poderosa.</p>
+            </div>
+        </div>
+    </section> <!-- PLANOS -->
+    <section id="planos" class="details-foods">
+        <div class="title">
+            <h1 data-aos="fade-left" data-aos-duration="1000">Planos de otimização</h1>
+        </div>
+        <div class="foods"> <!-- BRONZE (R$100) -->
+            <article class="card featured" data-aos="fade-up" data-aos-duration="1000"> <img src="images/salad.png"
+                    alt="Plano Bronze">
+                <div class="discription">
+                    <h2>Plano Bronze</h2>
+                    <ul class="benefits">
+                        <li>Otimização de <strong>10 fotos</strong> (compressão + ajuste de qualidade)</li>
+                        <li>Correção básica de cor e exposição</li>
+                        <li>Conversão de formatos (WebP/AVIF à pedido)</li>
+                        <li>Entrega em <strong>48h</strong> via link</li>
+                    </ul>
+                    <p class="price">R$ 100,00</p>
+                    <div class="card-cta"> <button class="btn select-plan"
+                            data-plan="Plano Bronze | R$100">Contratar</button> <button class="btn ghost"
+                            onclick="openWhatsApp('Plano Bronze | R$100')">WhatsApp</button> </div>
+                </div>
+            </article> <!-- PRATA -->
+            <article class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150"> <img
+                    src="images/salad1.png" alt="Plano Prata">
+                <div class="discription">
+                    <h2>Plano Prata</h2>
+                    <ul class="benefits">
+                        <li>Otimização de <strong>25 fotos</strong></li>
+                        <li>Retouches leves (remoção de manchas, ajustes finos)</li>
+                        <li>Redimensionamento para web e redes sociais</li>
+                        <li>1 landing page simples (até 1 seção funcional)</li>
+                        <li>Entrega em até <strong>72h</strong></li>
+                    </ul>
+                    <p class="price">R$ 249,00</p>
+                    <div class="card-cta"> <button class="btn select-plan"
+                            data-plan="Plano Prata | R$249">Contratar</button> <button class="btn ghost"
+                            onclick="openWhatsApp('Plano Prata | R$249')">WhatsApp</button> </div>
+                </div>
+            </article> <!-- OURO -->
+            <article class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"> <img
+                    src="images/salad2.png" alt="Plano Ouro">
+                <div class="discription">
+                    <h2>Plano Ouro</h2>
+                    <ul class="benefits">
+                        <li>Otimização de <strong>50 fotos</strong> com retouch avançado</li>
+                        <li>Criação de site responsivo até <strong>3 páginas</strong></li>
+                        <li>Performance & SEO básico</li>
+                        <li>Entrega priorizada + 7 dias de suporte</li>
+                    </ul>
+                    <p class="price">R$ 449,00</p>
+                    <div class="card-cta"> <button class="btn select-plan"
+                            data-plan="Plano Ouro | R$449">Contratar</button> <button class="btn ghost"
+                            onclick="openWhatsApp('Plano Ouro | R$449')">WhatsApp</button> </div>
+                </div>
+            </article> <!-- DIAMANTE -->
+            <article class="card premium" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450"> <img
+                    src="images/salad3.png" alt="Plano Diamante">
+                <div class="discription">
+                    <h2>Plano Diamante</h2>
+                    <ul class="benefits">
+                        <li>Otimização de <strong>100 fotos</strong> + retouch profissional</li>
+                        <li>Desenvolvimento de site/landing completo até <strong>6 páginas</strong> ou loja simples</li>
+                        <li>Otimização de performance avançada (caching, minify, imagens adaptativas)</li>
+                        <li>30 dias de suporte e acompanhamento de performance</li>
+                    </ul>
+                    <p class="price">R$ 799,00</p>
+                    <div class="card-cta"> <button class="btn select-plan"
+                            data-plan="Plano Diamante | R$799">Contratar</button> <button class="btn ghost"
+                            onclick="openWhatsApp('Plano Diamante | R$799')">WhatsApp</button> </div>
+                </div>
+            </article>
+        </div>
+    </section> <!-- DOWNLOAD / APP -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="image" data-aos="zoom-in" data-aos-duration="1000"> <img src="images/phone2.png"
+                    alt="App phone"> <img src="images/phone1.png" alt="App phone secondary"> </div>
+            <div class="content" data-aos="fade-left" data-aos-duration="1000">
+                <h1>Baixe nosso aplicativo</h1>
+                <p>Baixe nosso aplicativo na App Store ou na Play Store, disponível para as plataformas Android e iOS.
+                </p>
+                <div class="icons"> <img src="images/appstore.png" alt="App Store"> <img src="images/playstore.png"
+                        alt="Play Store"> </div>
+            </div>
+        </div>
+    </section> <!-- FOOTER & contato oculto -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>© <span id="year"></span> OPTIMIZE • Todos os direitos reservados • Desenvolvido por @EdlesonJr</p>
+            <div class="footer-links"> <a href="#planos">Planos</a> <a href="#sobre">Sobre</a> <a href="#"
+                    id="openContactFooter">Contato</a> </div>
+        </div> <!-- feedback / contato modal (simples) -->
+        <div class="contact-modal" id="contactModal" aria-hidden="true">
+            <div class="contact-card"> <button class="close" id="closeModal">&times;</button>
+                <h3 id="modalTitle">Entrar em contato</h3>
+                <form id="contactForm"> <label for="name">Nome</label> <input id="name" type="text" required> <label
+                        for="email">E-mail</label> <input id="email" type="email" required> <label
+                        for="message">Mensagem</label> <textarea id="message" rows="4"
+                        placeholder="Quero contratar o Plano Bronze..." required></textarea>
+                    <div class="modal-actions"> <button type="submit" class="btn primary">Enviar por WhatsApp</button>
+                        <button type="button" class="btn ghost" id="closeModal2">Fechar</button>
+                    </div>
+                    <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </footer> <!-- scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script> AOS.init(); </script>
+</body>
+
+</html>
