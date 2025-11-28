@@ -50,6 +50,7 @@ nav .nav-container {
 
 nav .logo {
     width: 58px;
+    transform: rotate(18deg);
 }
 
 nav .links {
@@ -68,7 +69,7 @@ nav .links a {
 }
 
 nav .links a:hover {
-    color: #6c63ff;
+    color: #FCA64D;
     text-shadow: 0 0 6px rgba(108, 99, 255, 0.4);
     transform: translateY(-2px);
 }
@@ -139,7 +140,7 @@ nav.scrolled .search {
 }
 
 .heading h3 {
-    color: #e63946;
+    color: #FCA64D;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -184,7 +185,7 @@ nav.scrolled .search {
 }
 
 .image img {
-    width: 420px;
+    width: 520px;
     transform: rotate(18deg);
     pointer-events: none;
 }
@@ -216,7 +217,7 @@ nav.scrolled .search {
 }
 
 .aboutus h1 {
-    color: #ff7a52;
+    color: #FCA64D;
     font-family: 'Patua One', serif;
     font-size: 2.8rem;
     margin-bottom: 12px;
