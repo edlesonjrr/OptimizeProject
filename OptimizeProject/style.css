@@ -50,7 +50,6 @@ nav .nav-container {
 
 nav .logo {
     width: 58px;
-    transform: rotate(18deg);
 }
 
 nav .links {
@@ -118,7 +117,7 @@ nav.scrolled .search {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('images/back.png');
+    background-image: url('images/FUNDO01.png');
     background-size: cover;
     background-position: center;
     background-color: #fff;
@@ -192,13 +191,19 @@ nav.scrolled .search {
 
 /* ================= ABOUT ================= */
 .aboutus {
-    background: #0b0b0b;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.30) 0px,
+            rgba(255, 255, 255, 0.22) 8px,
+            rgba(255, 255, 255, 0.14) 20px,
+            rgba(255, 255, 255, 0.08) 32px,
+            rgba(255, 255, 255, 0.04) 44px,
+            #ff751f 95px);
     color: white;
     padding: 60px 20px;
 }
 
 .aboutus .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     gap: 40px;
@@ -207,7 +212,7 @@ nav.scrolled .search {
 }
 
 .aboutus img {
-    width: 420px;
+    width: 760px;
     filter: drop-shadow(0 8px 30px rgba(255, 255, 255, 0.06));
 }
 
@@ -217,14 +222,14 @@ nav.scrolled .search {
 }
 
 .aboutus h1 {
-    color: #FCA64D;
+    color: black;
     font-family: 'Patua One', serif;
     font-size: 2.8rem;
     margin-bottom: 12px;
 }
 
 .aboutus p {
-    color: #e6e6e6;
+    color: black;
     font-size: 1.05rem;
     line-height: 1.5;
 }
@@ -232,7 +237,7 @@ nav.scrolled .search {
 .aboutus .tagline {
     margin-top: 12px;
     font-weight: 700;
-    color: #fff;
+    color: black;
 }
 
 /* ================= PLANOS ================= */
@@ -549,4 +554,139 @@ nav.scrolled .search {
     position: relative;
     bottom: -60px;
     z-index: 5;
+}
+
+/* ==========================================================
+   COMPARADOR ANTES / DEPOIS — ZERO DELAY
+========================================================== */
+
+.image-comparator {
+    position: relative;
+    width: 400px;
+    height: 540px;
+    overflow: hidden;
+    border-radius: 25px;
+    background: #000;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.40);
+}
+
+/* Imagem de cima (ANTES) */
+.img-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* será alterado via JS */
+    object-fit: cover;
+    z-index: 2;
+}
+
+/* Imagem de baixo (DEPOIS) */
+.img-after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* será alterado via JS */
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Linha do slider */
+.slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 2px;
+    transform: translateY(-50%);
+    cursor: grab;
+    z-index: 4;
+    box-shadow:
+        0 0 12px rgba(255, 255, 255, 0.6),
+        0 0 24px rgba(252, 166, 77, 0.3);
+}
+
+/* Ícone dentro do círculo */
+.slider-handle .circle img {
+    width: 45x;
+    height: 45px;
+    pointer-events: none;
+    user-select: none;
+
+    /* rotaciona 90 graus */
+    transform: rotate(90deg);
+}
+
+
+/* Círculo do Slider */
+.slider-handle .circle {
+    width: 43px;
+    height: 43px;
+    background: none;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.45),
+        inset 0 0 10px rgba(0, 0, 0, 0.1),
+        inset 0 0 8px rgba(255, 166, 77, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s ease;
+}
+
+.slider-handle:active .circle {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ==========================================
+   LABELS ANTES / DEPOIS — PREMIUM STYLE
+========================================== */
+
+.label-before,
+.label-after {
+    position: absolute;
+    z-index: 5;
+    padding: 6px 18px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    color: #ffffffd8;
+    user-select: none;
+    pointer-events: none;
+
+    /* Glass effect */
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    /* Premium Shadows */
+    box-shadow:
+        0 4px 14px rgba(0, 0, 0, 0.45),
+        inset 0 0 8px rgba(255, 255, 255, 0.15);
+}
+
+/* ANTES — canto superior direito */
+.label-before {
+    top: 14px;
+    right: 14px;
+    background: rgba(50, 50, 50, 0.40);
+}
+
+/* DEPOIS — canto inferior direito */
+.label-after {
+    bottom: 14px;
+    right: 14px;
+
+    background: rgba(50, 50, 50, 0.40);
 }
